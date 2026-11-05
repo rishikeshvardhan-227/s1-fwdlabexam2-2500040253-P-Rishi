@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>EduPortal</h2>
+    <p class="side-label">MAIN MENU</p>
+
+    <a href="#" class="active" onclick="showPage('dashboard', this)">🏠 Dashboard</a>
+    <a href="#" onclick="showPage('courses', this)">📚 My Courses</a>
+    <a href="#" onclick="showPage('materials', this)">📁 Study Materials</a>
+    <a href="#" onclick="showPage('profile', this)">👤 My Profile</a>
+    <a href="#" onclick="showPage('records', this)">📊 Academic Records</a>
+    <a href="#" onclick="showPage('attendance', this)">📅 Attendance</a>
+
+    <div class="logout">
+        <a href="#" onclick="alert('You have logged out!')">🚪 Logout</a>
+    </div>
+</div>
+
+<main class="main-content">
+
+    <header>
+        <div>
+            <h2 id="page-title">Dashboard</h2>
+            <p>Welcome back! Here's your academic overview.</p>
+        </div>
+        <div class="student">
+            <div class="avatar">R</div>
+            <span>Rishi</span>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="page active-page">
+
+        <div class="welcome">
+            <h1>Hello, Rishi! 👋</h1>
+            <p>Welcome to your student learning portal.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span>📚</span>
+                <h3>4</h3>
+                <p>Enrolled Courses</p>
+            </div>
+
+            <div class="stat-card">
+                <span>📊</span>
+                <h3>9.0</h3>
+                <p>Current CGPA</p>
+            </div>
+
+            <div class="stat-card">
+                <span>📅</span>
+                <h3>92%</h3>
+                <p>Attendance</p>
+            </div>
+
+            <div class="stat-card">
+                <span>📝</span>
+                <h3>4</h3>
+                <p>Assignments</p>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>Recent Announcements</h3>
+            <div class="announcement">
+                <h4>Internal Examinations</h4>
+                <p>Internal examinations will begin next week.</p>
+            </div>
+            <div class="announcement">
+                <h4>Study Materials Updated</h4>
+                <p>New course materials are available for download.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="page">
+        <h2>My Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+                <span>Instructor: Dineshnath Gopinath</span>
+            </div>
+            <div class="course-card">
+                <h3>Analog and Digital Communication</h3>
+                <p>Signal Processing, Modulation Techniques</p>
+                <span>Instructor: Syam Sundar</span>
+            </div>
+            <div class="course-card">
+                <h3>Computer Networks</h3>
+                <p>Networking Fundamentals</p>
+                <span>Instructor: Udaykiran</span>
+            </div>
+            <div class="course-card">
+                <h3>IOT</h3>
+                <p>Internet of Things</p>
+                <span>Instructor: Prabhakaran </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Materials -->
+    <section id="materials" class="page">
+        <h2>Study Materials</h2>
+        <div class="content-card">
+            <div class="material">
+                <span>📄 HTML Notes.pdf</span>
+                <a href="#" onclick="alert('Upload your PDF file link here')">Download</a>
+            </div>
+            <div class="material">
+                <span>📄 CSS Notes.pdf</span>
+                <a href="#" onclick="alert('Upload your PDF file link here')">Download</a>
+            </div>
+            <div class="material">
+                <span>📄 JavaScript Notes.pdf</span>
+                <a href="#" onclick="alert('Upload your PDF file link here')">Download</a>
+            </div>
+            <div class="material">
+                <span>📄 MongoDB Notes.pdf</span>
+                <a href="#" onclick="alert('Upload your PDF file link here')">Download</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="profile" class="page">
+        <h2>Personal Profile</h2>
+        <div class="content-card profile-card">
+            <div class="big-avatar">R</div>
+            <h3>Rishi</h3>
+            <p>Student ID: 2500040253</p>
+            <hr>
+            <p><b>Email:</b> 2500040253@kluniversity.in</p>
+            <p><b>Department:</b> Electronics and Communication Engineering</p>
+            <p><b>Year:</b> 2nd Year</p>
+            <p><b>College:</b> KL University</p>
+        </div>
+    </section>
+
+    <!-- Academic Records -->
+    <section id="records" class="page">
+        <h2>Academic Records</h2>
+        <div class="content-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>SGPA</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Semester 1</td><td>8.5</td><td>Pass</td></tr>
+                    <tr><td>Semester 2</td><td>8.2</td><td>Pass</td></tr>
+                    <tr><td>Semester 3</td><td>8.7</td><td>Pass</td></tr>
+                    <tr><td>Semester 4</td><td>9.0</td><td>Pass</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Attendance -->
+    <section id="attendance" class="page">
+        <h2>Attendance Details</h2>
+        <div class="content-card">
+            <h3>Overall Attendance: 92%</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width:92%"></div>
+            </div>
+            <p>You have maintained good attendance!</p>
+        </div>
+    </section>
+
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
